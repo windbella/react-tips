@@ -15,18 +15,22 @@
 ### redux
 - redux 사용하기 (https://redux.js.org/basics/usage-with-react)
    1. ![table1](https://raw.githubusercontent.com/windbella/react-tips/master/table1.png)
-   2. redux를 알고 있는가?
+   2. 컴포넌트가 redux를 알고 있는가?
    3. 목적에 충실
    4. 역할의 분리
-      1. (presentational) component -> 렌더링
+      1. (presentational) component -> 렌더링 -> 렌더와 이벤트 발생에만 집중 (스와이프? 애니메이션 효과 등등)
       2. container (component) -> 연결, 관리 (동작, 데이터 제공)
-      3. redux -> 대부분의 비지니스 로직
+      3. redux -> 대부분의 비지니스 로직 -> 앱의 핵심을 다룬 코어(리듀서 + 액션)를 만들면 여러가지 형태의 앱을 적은 노력으로 프로토타입핑 해볼수 있지 않을까?
 - 컴포넌트 합성 (https://ko.reactjs.org/docs/composition-vs-inheritance.html)
    1. 컴포넌트에서 다른 컴포넌트를 담기
    2. 컨테이너 중첩 문제? -> 컨테이너 in 컨테이너?
 ### async
-- https://github.com/reduxjs/redux-thunk
-- https://redux-saga.js.org/
+- redux-thunk (https://github.com/reduxjs/redux-thunk)
+  1. async/await
+  2. 추가적인 미들웨어나, 자체 관리
+- redux-saga (https://redux-saga.js.org/)
+  1. yeild(generator) + util
+  2. 제공되는 유용한 기능들
 ## 팁
 - 비교 알고리즘 (https://ko.reactjs.org/docs/reconciliation.html)
 ## 참조
