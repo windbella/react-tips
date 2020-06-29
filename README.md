@@ -5,6 +5,7 @@
 - https://reactjs-kr.firebaseapp.com/docs/thinking-in-react.html
 ### redux
 - https://redux.js.org/basics/usage-with-react
+- https://ko.reactjs.org/docs/composition-vs-inheritance.html
 ### async
 - https://github.com/reduxjs/redux-thunk
 - https://redux-saga.js.org/
