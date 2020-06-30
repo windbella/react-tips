@@ -28,11 +28,67 @@
 - redux-thunk (https://github.com/reduxjs/redux-thunk)
   1. async/await
   2. 추가적인 미들웨어나, 자체 관리
+``` javascript
+const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+
+function increment() {
+  return {
+    type: INCREMENT_COUNTER,
+  };
+}
+
+function incrementAsync() {
+  return (dispatch) => {
+    setTimeout(() => {
+      // Yay! Can invoke sync or async actions with `dispatch`
+      dispatch(increment());
+    }, 1000);
+  };
+}
+```
 - rematch (https://rematch.github.io/rematch/#/)
   1. redux-thunk 스타일의 편의 버전
+``` javascript
+export const count = {
+	state: 0, // initial state
+	reducers: {
+		// handle state changes with pure functions
+		increment(state, payload) {
+			return state + payload
+		},
+	},
+	effects: dispatch => ({
+		// handle state changes with impure functions.
+		// use async/await for async actions
+		async incrementAsync(payload, rootState) {
+			await new Promise(resolve => setTimeout(resolve, 1000))
+			dispatch.count.increment(payload)
+		},
+	}),
+}
+```
 - redux-saga (https://redux-saga.js.org/)
-  1. yeild(generator) + util
+  1. yield(generator) + util
   2. 제공되는 유용한 기능들
+``` javascript
+import { call, put } from 'redux-saga/effects'
+
+export function* fetchData(action) {
+   try {
+      const data = yield call(Api.fetchUser, action.payload.url)
+      yield put({type: "FETCH_SUCCEEDED", data})
+   } catch (error) {
+      yield put({type: "FETCH_FAILED", error})
+   }
+}
+```
+``` javascript
+import { takeEvery } from 'redux-saga/effects'
+
+function* watchFetchData() {
+  yield takeEvery('FETCH_REQUESTED', fetchData)
+}
+```
 - 기타
   1. redux-promise-middleware, redux-pender 미들웨어 아이디어
 ## 팁
