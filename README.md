@@ -28,9 +28,13 @@
 - redux-thunk (https://github.com/reduxjs/redux-thunk)
   1. async/await
   2. 추가적인 미들웨어나, 자체 관리
+- rematch (https://rematch.github.io/rematch/#/)
+  1. redux-thunk 스타일의 편의 버전
 - redux-saga (https://redux-saga.js.org/)
   1. yeild(generator) + util
   2. 제공되는 유용한 기능들
+- 기타
+  1. redux-promise-middleware, redux-pender 미들웨어 아이디어
 ## 팁
 - 비교 알고리즘 (https://ko.reactjs.org/docs/reconciliation.html)
 ## 참조
