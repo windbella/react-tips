@@ -1,4 +1,4 @@
-# react-tips (작성 중입니다...)
+# react-tips
 ## 상태관리
 ### state
 - state 끌어올리기 (https://reactjs-kr.firebaseapp.com/docs/lifting-state-up.html)
