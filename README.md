@@ -7,13 +7,15 @@
   2. 데이터가 위에서 아래로 흐름  
     -> state를 동기화 하기보다는 source of truth를 기준으로 하향식 데이터 흐름을 만드는 것을 추천
 - React스럽게 생각하기 (https://reactjs-kr.firebaseapp.com/docs/thinking-in-react.html)
-  1. 정적 버전 만들기 (state가 일절 없음)
-  2. UI state 찾기
+  1. 데이터 모델 준비
+  2. 컴포넌트 계층 분리 -> 단일 책임 원칙, 모델의 한 조각
+  3. 정적 버전 만들기 (state가 일절 없음)
+  4. UI state 찾기
      1. 부모로부터 props를 통해 전달됩니까? 그러면 확실히 state가 아닙니다.
      2. 시간이 지나도 변하지 않나요? 그러면 확실히 state가 아닙니다
      3. 컴포넌트 안의 다른 state나 props를 가지고 계산 가능한가요? 그렇다면 state가 아닙니다.
-  3. state의 위치 찾기 -> container?
-  4. 역방향 데이터 흐름 추가하기
+  5. state의 위치 찾기 -> container?
+  6. 역방향 데이터 흐름 추가하기
 ### redux
 - redux 사용하기 (https://redux.js.org/basics/usage-with-react)
    1. ![table1](https://raw.githubusercontent.com/windbella/react-tips/master/table1.png)
