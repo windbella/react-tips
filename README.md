@@ -30,7 +30,7 @@
    2. 컨테이너 중첩 문제? -> 컨테이너 in 컨테이너?
 ### async
 - redux-thunk (https://github.com/reduxjs/redux-thunk)
-  1. async/await
+  1. promise (async/await)
   2. 추가적인 미들웨어나, 자체 관리
 ``` javascript
 const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
