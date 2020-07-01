@@ -3,7 +3,9 @@
 ### state
 - state 끌어올리기 (https://reactjs-kr.firebaseapp.com/docs/lifting-state-up.html)
   1. state가 없는 component 만들기  
-  2. 데이터가 위에서 아래로 흐름
+    -> 이러한 컴포넌트는 재활용성이 높아지는 형태이며, state뿐 아니라 기능적인 부분도 고려해야 함
+  2. 데이터가 위에서 아래로 흐름  
+    -> state를 동기화 하기보다는 source of truth를 기준으로 하향식 데이터 흐름을 만드는 것을 추천
 - React스럽게 생각하기 (https://reactjs-kr.firebaseapp.com/docs/thinking-in-react.html)
   1. 정적 버전 만들기 (state가 일절 없음)
   2. UI state 찾기
