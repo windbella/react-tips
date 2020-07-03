@@ -18,7 +18,8 @@
   6. 역방향 데이터 흐름 추가하기
 ### redux
 - redux 사용하기 (https://redux.js.org/basics/usage-with-react)
-   1. ![table1](https://raw.githubusercontent.com/windbella/react-tips/master/table1.png)
+   1. ![table1](https://raw.githubusercontent.com/windbella/react-tips/master/table1.png)  
+   -> HOOK의 등장으로 필요성이 감소하긴 했지만, 여전히 프로젝트가 규모가 커지면 커지면 의미가 있는 패턴이라는 의견이 많음
    2. 컴포넌트가 redux를 알고 있는가?
    3. 목적에 충실
    4. 역할의 분리
@@ -98,6 +99,9 @@ function* watchFetchData() {
 ## 팁
 - 비교 알고리즘 (https://ko.reactjs.org/docs/reconciliation.html)
 ## 참조
-- 고차 컴포넌트 (https://reactjs-kr.firebaseapp.com/docs/higher-order-components.html) -> 합성
-- Portals (https://ko.reactjs.org/docs/portals.html) -> Popup 같은 케이스의 해결책 중 하나
-- 리액트 상의 에러 페이지 (https://ko.reactjs.org/docs/error-boundaries.html)
+- 고차 컴포넌트 (https://reactjs-kr.firebaseapp.com/docs/higher-order-components.html) -> 합성, 꽤 강력한 기능이지만 중첩이 많이 되면 효율적이지 않을 수 있어 아래 HOOK 등에서 다른 방법 들을 제시하고 있음
+- HOOK (https://ko.reactjs.org/docs/hooks-intro.html)  
+-> Class 스타일의 컴포넌트를 보완하기 위한 기능 (함수형 컴포넌트에서 사용 가능)
+최근에 함수형 컴포넌트를 기본으로 필요에 따라서 훅을 추가하거나 React.Component를 고려하는 것을 밀고있는 듯함
+- Portals (https://ko.reactjs.org/docs/portals.html) -> Popup 같은 케이스의 해결책 중 하나, 구조적으로 해결하는 것이 좋지만 임시방편으로 고려할 수 있음
+- 리액트 상의 에러 페이지 (https://ko.reactjs.org/docs/error-boundaries.html) -> HOOK API로는 없기 때문에 상단 컴포넌트에서(클래스 스타일) Fallback 느낌으로 쓰는걸 고려해볼만함
